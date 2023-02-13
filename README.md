@@ -1,6 +1,8 @@
 # apache-flink-locally
 
-Running Apache Flink locally
+Running Apache Flink locally using Localstack DynamoDB as data source
+
+## Apache Flink and Localstack infrastructure
 
 ### Launch a cluster in the foreground (use -d for background)
 
@@ -30,8 +32,38 @@ $ docker-compose down
 
 When the cluster is running, you can visit the web UI at http://localhost:8081.
 
-### Starting the SQL Client run
+## Starting the SQL Client run
 
 ```bash
 $ docker-compose run sql-client
+```
+
+## Creating Input and Ouput DynamoDB table
+
+Updating `variables.tf` to set tables and attributes name
+
+### Terraform init
+
+```bash
+$ terraform init
+```
+
+### Terraform plan
+
+```bash
+$ terraform plan
+```
+
+### Terraform apply
+
+```bash
+$ terraform apply
+```
+
+### Terraform destroy
+
+To destroy all resources
+
+```bash
+$ terraform destroy
 ```
