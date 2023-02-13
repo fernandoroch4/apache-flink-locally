@@ -1,8 +1,8 @@
-# apache-flink-locally
+# Apache Flink - Locally
 
 Running Apache Flink locally using Localstack DynamoDB as data source
 
-## Apache Flink and Localstack infrastructure
+## 1. Apache Flink and Localstack infrastructure
 
 ### Launch a cluster in the foreground (use -d for background)
 
@@ -38,7 +38,7 @@ When the cluster is running, you can visit the web UI at http://localhost:8081.
 $ docker-compose run sql-client
 ```
 
-## Creating Input and Ouput DynamoDB table
+## 2. Creating Input and Ouput DynamoDB table
 
 Updating `variables.tf` to set tables and attributes name
 
